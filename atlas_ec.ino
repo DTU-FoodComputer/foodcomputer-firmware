@@ -1,4 +1,6 @@
-#include "configuration.h"
+// Water electrical conductivity sensor 
+
+/*#include "configuration.h"
 
 int atlas_ec_addr;
 boolean atlas_ec_waiting_for_response;
@@ -119,5 +121,5 @@ void atlas_ec_read_response() {
 
 String atlas_ec_get_msg(){
   return atlas_ec_msg;
-}
+}*/
 
