@@ -106,6 +106,28 @@ boolean start_actuators(String subject){
     start_ph_minus();
     stop_ph_plus();
     return true;
+  } else if (subject.equals("pump_a")){
+    start_nutrient_a();
+    return true;
+  } else if (subject.equals("pump_b")){
+    start_nutrient_b();
+    return true;
+  } else if (subject.equals("h2o_pump")){
+    start_water_pump();
+    return true;
+  } else if (subject.equals("fan_flush")){
+    start_fan_flush();
+    return true;
+  } else if (subject.equals("heater")){
+    start_heater();
+    start_fan_heat();
+    return true;
+  } else if (subject.equals("air_pump")){
+    start_air_pump();
+    return true;
+  } else if (subject.equals("cir_pump")){
+    start_cir_pump();
+    return true;
   }
   
   return false;
@@ -116,7 +138,30 @@ boolean stop_actuators(String subject){
     stop_ph_plus();
     stop_ph_minus();
     return true;
+  } else if (subject.equals("pump_a")){
+    stop_nutrient_a();
+    return true;
+  } else if (subject.equals("pump_b")){
+    stop_nutrient_b();
+    return true;
+  } else if (subject.equals("h2o_pump")){
+    stop_water_pump();
+    return true;
+  } else if (subject.equals("fan_flush")){
+    stop_fan_flush();
+    return true;
+  } else if (subject.equals("heater")){
+    stop_heater();
+    stop_fan_heat();
+    return true;
+  } else if (subject.equals("air_pump")){
+    stop_air_pump();
+    return true;
+  } else if (subject.equals("cir_pump")){
+    stop_cir_pump();
+    return true;
   }
+  
   return false;
 }
 

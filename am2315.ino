@@ -1,5 +1,6 @@
 // Temperature and humidity sensor
-
+#include "configuration.h"
+#include "pins.h"
 #include <Wire.h>
 #include <Adafruit_AM2315.h>
 

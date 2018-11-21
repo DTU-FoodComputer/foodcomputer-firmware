@@ -1,5 +1,8 @@
 // control of the 3 LED channels
 
+#include "configuration.h"
+#include "pins.h"
+
 int blue_light_state;
 int red_light_state;
 int white_light_state;
