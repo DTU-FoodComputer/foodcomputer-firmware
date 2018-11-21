@@ -24,14 +24,14 @@ boolean interpret_command(String cmd) {
 
   if (command_verb.equals("read")){
     return read_values(command_subject);
-  }
-
-  if (command_verb.equals("set")){
+  } else if (command_verb.equals("set")){
     return set_values(command_subject, command_value);
-  }
-
-  if (command_verb.equals("get")){
+  } else if (command_verb.equals("get")){
     return get_values(command_subject);
+  } else if (command_verb.equals("start")){
+    return start_actuators(command_subject);
+  } else if (command_verb.equals("stop")){
+    return stop_actuators(command_subject);
   }
 
   return false;
@@ -92,6 +92,29 @@ boolean get_values(String subject){
     return true;
   } else if (subject.equals("white_light_int")){
     Serial.println(get_white_light_int());
+    return true;
+  }
+  return false;
+}
+
+boolean start_actuators(String subject){
+  if (subject.equals("ph_plus")){
+    start_ph_plus();
+    stop_ph_minus();
+    return true;
+  } else if (subject.equals("ph_minus")){
+    start_ph_minus();
+    stop_ph_plus();
+    return true;
+  }
+  
+  return false;
+}
+
+boolean stop_actuators(String subject){
+  if (subject.equals("ph")){
+    stop_ph_plus();
+    stop_ph_minus();
     return true;
   }
   return false;

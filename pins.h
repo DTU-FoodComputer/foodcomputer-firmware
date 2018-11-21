@@ -4,3 +4,6 @@
 #define BLUE_LED_PIN   40  // K4
 #define RED_LED_PIN    41  // K3
 #define WHITE_LED_PIN  42  // K2
+#define PH_MINUS_PIN   31 
+#define PH_PLUS_PIN    30
+

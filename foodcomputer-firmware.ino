@@ -40,6 +40,7 @@ void init_sensors() {
 
 void init_actuators(){
   init_lights();
+  init_ph_pumps();
 }
 
 void loop_sensors() {
