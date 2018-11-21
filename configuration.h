@@ -14,3 +14,7 @@
 #define AM2315_UPDATE_INTERVAL 1000
 
 #define BAUD_RATE 115200
+
+#define LIGHT_ON    LOW
+#define LIGHT_OFF   HIGH
+

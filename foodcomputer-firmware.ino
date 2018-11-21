@@ -6,6 +6,7 @@ String cmd_string;
 void setup() {
   cmd_string = "";
   init_sensors();
+  init_actuators();
   Serial.begin(BAUD_RATE);
 }
 
@@ -35,6 +36,10 @@ void init_sensors() {
   //Wire.begin();
   init_water_level();
   init_am2315();
+}
+
+void init_actuators(){
+  init_lights();
 }
 
 void loop_sensors() {
