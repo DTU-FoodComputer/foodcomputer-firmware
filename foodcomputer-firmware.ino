@@ -43,6 +43,7 @@ void init_actuators(){
   init_pumps();
   init_fans();
   init_heater();
+  init_timer(12L*60L*60L, 18L*60L*60L, 6L*60L*60L, true); // 18 hours on, 6 hours off, turned on 12 hours into cycle
 }
 
 void loop_sensors() {
@@ -52,5 +53,6 @@ void loop_sensors() {
 
 void loop_actuators() {
   // loop through actuators here
+  update_timer();
 }
 
